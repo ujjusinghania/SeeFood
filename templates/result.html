@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> SeeFood - Image Recognition</title>
+</head>
+
+<style>
+    div.centerOfScreen {
+        position: absolute;
+        top: 10%;
+        text-align: center;
+        display: block;
+    }
+
+    .tab { 
+       display:inline-block; 
+       margin-left: 36px; 
+    }
+
+    body {
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+    }
+</style>
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+<link rel="stylesheet" href="/static/styles/normalize.css">
+<link rel="stylesheet" href="/static/styles/milligram.css">
+
+<body>
+    <div class='row centerOfScreen'>
+        <img src="{{foodURL}}" />
+        <br/><br/>
+        <p>Unknown: {{unkownP}}% <span class='tab'>Burger: {{burgerP}}% </span><span class='tab'>Cheesecake: {{cheesecakeP}}% </span><span class='tab'>FrenchFries: {{frenchfriesP}}% </span><span class='tab'>Pizza: {{pizzaP}}% </span><span class='tab'></span><form><button class="button-primary" formaction="/">Classify Another Image</button></form></p>
+        <br/><br/>
+    </div>
+</body>
+
+<script>
+        $(".button-primary").css("background-color", "black");
+    </script>
+
+</html>
